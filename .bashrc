@@ -94,7 +94,7 @@ fi
 
 # source bash_functions if it exists
 if [ -f ~/.bash_functions ]; then
-    . ~/.bash_functins
+    . ~/.bash_functions
 fi
 
 # Anaconda initilization and other related definitions.
