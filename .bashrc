@@ -57,9 +57,9 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+    PS1='\[\033[01;95m\][\[\033[00m\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]\[\033[01;37m\]|\[\033[00m\]\[\033[01;36m\]\W\[\033[00m\]\[\033[01;33m\]$(__git_ps1 " (%s)")\[\033[00m\]\[\033[01;95m\]]\[\033[00m\]: \[\033[01;34m\]\w\[\033[00m\]\n\$  '
 else
-    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+    PS1='[${debian_chroot:+($debian_chroot)}\u@\h|\W$(__git_ps1 " (%s)")]: \w\n\$  '
 fi
 unset color_prompt force_color_prompt
 
@@ -135,3 +135,7 @@ fi
 # If you have Android SDK installed, uncomment the following lines to set it up
 # export ANDROID_HOME="$HOME/Android/android_sdk"
 # export PATH="$ANDROID_HOME/cmdline-tools/latest/bin:$ANDROID_HOME/emulator:$ANDROID_HOME/platform-tools:$PATH"
+
+# composer
+# If you have php composer installed, uncomment the following lines to add it's global vendor path
+# export PATH=~/.config/composer/vendor/bin:$PATH
