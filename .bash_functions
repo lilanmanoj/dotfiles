@@ -58,6 +58,8 @@ function package_update {
             sudo apt list --upgradeable
             echo "- Upgrading apt packages"
             sudo apt-get upgrade -y
+            echo "- Upgrading kernel packages"
+            sudo apt-get dist-upgrade -y
             echo "- Upgrading flatpak packages"
             flatpak update -y
             echo "- Auto-removing apt packages"
@@ -84,6 +86,8 @@ function package_update {
             sudo apt list --upgradeable
             echo "- Upgrading apt packages"
             sudo apt-get upgrade -y
+            echo "- Upgrading kernel packages"
+            sudo apt-get dist-upgrade -y
             echo "- Upgrading flatpak packages"
             flatpak update -y
             echo "- Auto-removing apt packages"
