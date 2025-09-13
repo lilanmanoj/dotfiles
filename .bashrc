@@ -94,7 +94,13 @@ fi
 
 # source bash_functions if it exists
 if [ -f ~/.bash_functions ]; then
-    . ~/.bash_functins
+    . ~/.bash_functions
+fi
+
+# Anaconda initilization and other related definitions.
+# place init script for conda in ~/.bash_conda
+if [ -f ~/.bash_conda ]; then
+    . ~/.bash_conda
 fi
 
 # enable programmable completion features (you don't need to enable
@@ -107,23 +113,6 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-# The next line updates PATH for the Anaconda3 installation
-# If you have anaconda installed, uncomment the following lines to initaite it
-# __conda_setup="$('/home/lilanmanoj/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
-# if [ $? -eq 0 ]; then
-#     eval "$__conda_setup"
-# else
-#     if [ -f "/home/lilanmanoj/anaconda3/etc/profile.d/conda.sh" ]; then
-#         . "/home/lilanmanoj/anaconda3/etc/profile.d/conda.sh"
-#     else
-#         export PATH="/home/lilanmanoj/anaconda3/bin:$PATH"
-#     fi
-# fi
-# unset __conda_setup
-# <<< conda initialize <<<
 
 # nvm
 # If you have nvm installed, uncomment the following lines to load it
